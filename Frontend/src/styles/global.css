@@ -1,0 +1,415 @@
+:root {
+  --bg-main: #0d1117;
+  --bg-surface: #161b22;
+  --bg-card: #21262d;
+  --text-main: #c9d1d9;
+  --text-muted: #8b949e;
+  --accent-neon: #58a6ff;
+  --accent-success: #238636;
+  --border-color: #30363d;
+  --error-bg: #f8514915;
+  --error-border: #f85149;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  padding: 20px;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* Search engine UI styling layout properties elements components structural properties blocks hooks components modules workspace elements tools system design layer interface configurations controls */
+.search-wrapper {
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+}
+
+.search-container {
+  display: flex;
+  gap: 12px;
+}
+
+.search-container input {
+  flex: 1;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 14px 16px;
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.search-container input:focus {
+  outline: none;
+  border-color: var(--accent-neon);
+}
+
+.search-container button {
+  background-color: var(--accent-success);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  padding: 0 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.search-container button:hover {
+  opacity: 0.9;
+}
+
+.search-container button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* History tags styling configuration properties mapping controls layer blocks components items context */
+.recent-searches {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag-btn {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--accent-neon);
+  padding: 4px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.tag-btn:hover {
+  background-color: var(--border-color);
+}
+
+/* Global Alert Notifications Panel View Representation Component elements tools system elements layout configuration block context code layers logic */
+.error-banner {
+  background-color: var(--error-bg);
+  border: 1px solid var(--error-border);
+  color: #ff7b72;
+  border-radius: 6px;
+  padding: 14px;
+  max-width: 600px;
+  margin: 20px auto;
+  font-weight: 500;
+}
+
+/* Grid workspace dashboard layout split engine setup properties display interface elements controls structures blocks */
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Profile Sidebar Components elements tools mapping parameters */
+.profile-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  position: sticky;
+  top: 20px;
+}
+
+.avatar-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  margin-bottom: 16px;
+}
+
+.user-fullname {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+
+.user-login {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.user-bio {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.stats-matrix {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 16px;
+}
+
+.stat-node {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-count {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* Feeds layout views repository listings components details container rules layers logic block configurations structures */
+.feed-controls-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.feed-controls-header h3 {
+  color: #fff;
+}
+
+.modern-dropdown {
+  background-color: var(--bg-surface);
+  color: #fff;
+  border: 1px solid var(--border-color);
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.repos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.repo-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.repo-card:hover {
+  border-color: var(--text-muted);
+}
+
+.repo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.repo-name {
+  color: var(--accent-neon);
+  font-size: 1.15rem;
+}
+
+.star-badge {
+  background-color: var(--bg-card);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  border: 1px solid var(--border-color);
+}
+
+.repo-desc {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.repo-footer {
+  display: flex;
+  gap: 20px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.repo-lang {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lang-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #f1e05a;
+  border-radius: 50%;
+}
+
+/* Expandable Drawer Sub-Section View Layout System Properties */
+.repo-details-drawer {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-main);
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.drawer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  font-size: 0.85rem;
+}
+
+.drawer-item code {
+  background-color: var(--bg-card);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #ff7b72;
+}
+
+/* Progressive Streaming Pagination View Controls Styles configurations components layers logic loop framework blocks structures */
+.pagination-box {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.load-more-btn {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--accent-neon);
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.load-more-btn:hover {
+  background-color: var(--bg-surface);
+}
+
+/* Premium Motion Animation Transitions Layer Framework Properties components */
+.animate-fade {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Skeletons Core Pulser Logic Processing Blocks View Representations Elements Properties Layers Layout Styles */
+.skeleton-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--bg-surface);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.skeleton-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--bg-card);
+}
+
+.skeleton-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 20px;
+  margin-top: 15px;
+}
+
+.skeleton-text {
+  background-color: var(--bg-card);
+  border-radius: 4px;
+}
+
+.pulse {
+  animation: pulse-animation 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse-animation {
+  0% { opacity: 0.6; }
+  50% { opacity: 0.3; }
+  100% { opacity: 0.6; }
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,341 @@
+:root {
+  --bg-main: #0d1117;
+  --bg-surface: #161b22;
+  --bg-card: #21262d;
+  --text-main: #c9d1d9;
+  --text-muted: #8b949e;
+  --accent-neon: #58a6ff;
+  --accent-success: #238636;
+  --border-color: #30363d;
+  --error-bg: rgba(248, 81, 73, 0.1);
+  --error-border: #f85149;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  padding: 40px 20px;
+}
+
+.app-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Search Bar Designs */
+.search-wrapper {
+  margin-bottom: 30px;
+}
+
+.search-container {
+  display: flex;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto 15px auto;
+}
+
+.search-container input {
+  flex: 1;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 12px 16px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.search-container input:focus {
+  outline: none;
+  border-color: var(--accent-neon);
+}
+
+.search-container button, .load-more-btn {
+  background-color: var(--accent-success);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.search-container button:disabled, .load-more-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.recent-searches {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.tags {
+  display: inline-flex;
+  gap: 8px;
+  margin-left: 8px;
+}
+
+.tag-btn {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--accent-neon);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* Dashboard Layout */
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.profile-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  position: sticky;
+  top: 20px;
+}
+
+.avatar-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  margin-bottom: 16px;
+}
+
+.user-fullname {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.user-login {
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.user-bio {
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.stats-matrix {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid var(--border-color);
+  padding-top: 15px;
+}
+
+.stat-node {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-count {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Repos feed elements */
+.feed-controls-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.modern-dropdown {
+  background-color: var(--bg-surface);
+  color: #fff;
+  border: 1px solid var(--border-color);
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.repos-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.repo-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 20px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.repo-card:hover {
+  border-color: var(--text-muted);
+}
+
+.repo-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.repo-name a {
+  color: var(--accent-neon);
+  text-decoration: none;
+}
+
+.repo-name a:hover {
+  text-decoration: underline;
+}
+
+.star-badge {
+  background-color: var(--bg-card);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+.repo-desc {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.repo-footer {
+  display: flex;
+  gap: 20px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.lang-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f1e05a;
+}
+
+/* Expanded details drawer */
+.repo-details-drawer {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.88rem;
+}
+
+.drawer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+.topic-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 5px;
+}
+
+.topic-tag {
+  background-color: rgba(88, 166, 255, 0.1);
+  color: var(--accent-neon);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+}
+
+/* Banners, Spinners & Skeletons */
+.error-banner {
+  background-color: var(--error-bg);
+  border: 1px solid var(--error-border);
+  color: #ff6b6b;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+}
+
+.pagination-box {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.pulse {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 0.3; }
+  100% { opacity: 0.6; }
+}
+
+.skeleton-wrapper { margin-top: 30px; }
+.skeleton-profile { background: var(--bg-surface); padding: 30px; border-radius: 8px; text-align: center; }
+.skeleton-avatar { width: 100px; height: 100px; border-radius: 50%; background: var(--bg-card); margin: 0 auto; }
+.skeleton-text { background: var(--bg-card); border-radius: 4px; }
+.skeleton-grid { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
+.skeleton-card { background: var(--bg-surface); border: 1px solid var(--border-color); padding: 20px; border-radius: 6px; }
