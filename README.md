@@ -2,7 +2,7 @@
 
 <live link>
 Live Frontend:
-https://github-repo-explorer-frontend-gamma.vercel.app
+[[https://github-repo-explorer-frontend-gamma.vercel.app](https://github-repo-explorer-frontend-gamma.vercel.app/)](https://github-repo-explorer-frontend-gamma.vercel.app/)
 
 Live Backend:
 https://github-repo-explorer-api-8sgt.onrender.com
