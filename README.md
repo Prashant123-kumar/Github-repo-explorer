@@ -10,6 +10,16 @@ https://github-repo-explorer-api-8sgt.onrender.com
 Swagger:
 https://github-repo-explorer-api-8sgt.onrender.com/swagger-ui.html
 
+Backend deployment:
+https://github-repo-explorer-backend-1.onrender.com
+
+Example API:
+https://github-repo-explorer-backend-1.onrender.com/api/github/torvalds
+
+Frontend can be run locally using:
+npm install
+npm run dev
+
 <div align="center">
 
 ![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge\&logo=react)
